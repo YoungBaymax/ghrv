@@ -144,6 +144,11 @@ input.printablebutton {
     display:none;
 }
 
+input.defaultbutton {
+    float:right;
+    display:block;
+}
+
 /* Images */
 
 img {

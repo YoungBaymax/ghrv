@@ -142,6 +142,9 @@ hr {
   margin:0 0 24px;
 }
 
+input.defaultbutton {
+    display:none;
+}
 
 input.printablebutton {
     float:right;
