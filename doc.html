@@ -7,7 +7,9 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="alternate stylesheet" title="printable" href="stylesheets/printable.css" />
     <script src="javascripts/scale.fix.js"></script>
+    <script src="javascripts/styleswitch.js" type="text/javascript"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -29,18 +31,35 @@
 
 
       </header>
+
       <section>
-        <?php
-         require($DOCUMENT_ROOT . "./prueba.html");
-         ?>
+
+        <FORM  NAME="myform">
+          <INPUT class="printablebutton" TYPE="button" NAME="button" Value="Printable version" onClick="javascript:chooseStyle('printable', 60)">
+        </FORM>
+       
 
         <h1>Overview</h1>
-            <p>Heart Rate Variability (HRV) can be defined as the variations in the sequence of periods between consecutive heartbeats, and it is regulated by factors extrinsic to the circulatory system. Variability is the result of a trade-off between the influence of the parasympathetic system (accelerating the heart rate) and the sympathetic system (slowing the heart rate). This relationship was experimentally determined by Aselkrod in 1981 <a href="#references">[1]</a>. Since then, its clinical usefulness in various pathologies such as myocardial infarction, hypertension, heart failure, transplantation, etc, has been studied <a href="#references">[2]</a>, <a href="#references">[3]</a>. The typical HRV spectrum of a healthy person at rest is mainly composed of two components: a low frequency band (LF), from 0.04 to 0.15 Hz; and a high frequency band (HF) ranging from 0.15 to 0.4 Hz.</p>
+            <p>Heart Rate Variability (HRV) can be defined as the variations in the sequence of periods between consecutive heartbeats, and it is regulated by factors extrinsic to the circulatory system. Variability is the result of a trade-off between the influence of the parasympathetic system (accelerating the heart rate) and the sympathetic system (slowing the heart rate). This relationship was experimentally determined by Aselkrod in 1981 <a class="cite" href="#references">[Aksel81]</a>. Since then, its clinical usefulness in various pathologies such as myocardial infarction, hypertension, heart failure, transplantation, etc, has been studied <a class="cite" href="#references">[Malik95]</a> <a class="cite" href="#references">[Task96]</a>. The typical HRV spectrum of a healthy person at rest is mainly composed of two components: a low frequency band (LF), from 0.04 to 0.15 Hz; and a high frequency band (HF) ranging from 0.15 to 0.4 Hz.</p>
+
+            <p>HRV analysis has been a very active research field for the last twenty years. Distinct techniques have been proposed in this area, such as spectral analysis, non-lineal techniques or time-domain methods <a class="cite" href="#references">[Chang07]</a> <a class="cite" href="#references">[Achar06]</a> .</p>
+
+            <p>At the present moment, HRV analysis has not been established as a standard method for diagnosis. This has conducted providers of medical technology at excluding this type of analysis in their devices, and researchers depend on software applications in order to apply additional processing methods.</p>
+
+            <p>More to come...</p>
 
 
 
         <h1 id="references">References</h1>
-        <p>[1] Akselkrod, D. Gordon, F.A. Ubel, D.C. Shannon, A.C. Barger, R.J. Cohen, Power spectrum analysis of heart rate fluctuation: a quantitative probe of beat to beat cardiovascular control, Science 213, 220-222 (1981)</p>
+        <dl>
+          <dt>[Achar06]</dt><dd>U.R. Acharya, K.P. Joseph, N. Kannathal, C.M., Lim, J.S. Suri, Heart rate variability: a review, Medical and Biomedical Engineering and Computing 44, 1031-1051 (2006).</dd>
+          <dt>[Aksel81]</dt><dd>S. Akselkrod, D. Gordon, F.A. Ubel, D.C. Shannon, A.C. Barger, R.J. Cohen, Power spectrum analysis of heart rate fluctuation: a quantitative probe of beat to beat cardiovascular control, Science 213, 220-222 (1981)</dd>
+          <dt>[Chang07]</dt><dd>F.C. Chang, C.K. Chang, C.C. Chiu, S.F. Hsu, Y.D. Lin, Variations of HRV Analysis in Different Approaches, In Computers in Cardiology 34, 17-20 (2007).</dd>
+          <dt>[Malik95]</dt><dd>M. Malik, A.J. Camm, Heart rate variability. Futura (1995)</dd>
+          <dt>[Task96]</dt><dd>Task Force of the European Society of Cardiology the North American Society of Pacing Electrophysiology, Heart rate variability: standards of measurement, physiological interpretation, and clinical use, Circulation 93, 1043-1065 (1996)</dd>
+
+
+        </dl>
 
         
       </section>
