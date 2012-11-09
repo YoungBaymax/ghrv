@@ -168,6 +168,18 @@ img {
   border: 1px solid #ccc;
 }
 
+img.screenshot {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p.imgtxt {
+  text-align: center;
+  font-size: 10px;
+  font-style: italic;
+}
+
 
 /* Code blocks */
 
