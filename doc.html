@@ -39,13 +39,40 @@
           <INPUT class="defaultbutton" TYPE="button" NAME="button" Value="Default style" onClick="javascript:chooseStyle('default', 60)">
         </FORM>
        
+        <h1>Table of contents</h1>
+          <ul>
+            <li><a class="toc" href="#overview">Overview</a></li>
+            <li><a class="toc" href="#references">References</a></li>
+          </ul>
 
-        <h1>Overview</h1>
+        <h1 id="overview">Overview</h1>
           <p>Heart Rate Variability (HRV) can be defined as the variations in the sequence of periods between consecutive heartbeats, and it is regulated by factors extrinsic to the circulatory system. Variability is the result of a trade-off between the influence of the parasympathetic system (accelerating the heart rate) and the sympathetic system (slowing the heart rate). This relationship was experimentally determined by Aselkrod in 1981 <a class="cite" href="#references">[Aksel81]</a>. Since then, its clinical usefulness in various pathologies such as myocardial infarction, hypertension, heart failure, transplantation, etc, has been studied <a class="cite" href="#references">[Malik95]</a> <a class="cite" href="#references">[Task96]</a>. The typical HRV spectrum of a healthy person at rest is mainly composed of two components: a low frequency band (LF), from 0.04 to 0.15 Hz; and a high frequency band (HF) ranging from 0.15 to 0.4 Hz.</p>
 
-          <p>HRV analysis has been a very active research field for the last twenty years. Distinct techniques have been proposed in this area, such as spectral analysis, non-lineal techniques or time-domain methods <a class="cite" href="#references">[Chang07]</a> <a class="cite" href="#references">[Achar06]</a> .</p>
+          <p>HRV analysis has been a very active research field for the last twenty years. Distinct techniques have been proposed in this area, such as spectral analysis, non-lineal techniques or time-domain methods <a class="cite" href="#references">[Achar06]</a> <a class="cite" href="#references">[Chang07]</a> .</p>
 
           <p>At the present moment, HRV analysis has not been established as a standard method for diagnosis. This has conducted providers of medical technology at excluding this type of analysis in their devices, and researchers depend on software applications in order to apply additional processing methods.</p>
+
+          <p>The common factor for all the algorithms aimed at helping clinicians in the HRV analysis is the fact that the majority of them have been implemented by particular investigation groups, which are forced to develop their own and proprietary software, due to the lack of a common software package, easily accessible and downloadable, that fulfills the particular requirements of each research association.</p>
+
+          <p>To perform this task, many programming languages are employed, such as Matlab <a class="cite" href="#references">[MatHRV]</a>,  Java <a class="cite" href="#references">[Bogu11]</a>, or even LabView <a class="cite" href="#references">[Nati09]</a>. Other software packages alse deserve comment, such as the Kubios-HRV <a class="cite" href="#references">[Nisk04]</a>.</p>
+
+          <p>Many applications can be found in the literature, including generation of correlated discrete ordinal data arising from longitudinal studies of medical research <a class="cite" href="#references">[Ibra11]</a>, detection of breast cancer <a class="cite" href="#references">[Roca12]</a>, population pharmacokinetic modeling for analyzing drugs effects and individual variations <a class="cite" href="#references">[Sun11]</a>, or time-series analysis <a class="cite" href="#references">[Koso11]</a>.</p>
+
+          <p>Due to the growing scientific community developing specific software, and attending to the requirements of researchers, that usually need to unify software functionality into one open source and easily extendible tool, we have developed gHRV, a software package for HRV analysis (partially based on RHRV <a class="cite" href="#references">[Rodr11]</a>), in an attempt to help clinicians in the analysis of the heart rate. The gHRV software integrates partially RHRV as mathematical tool, but the user is offered a powerful and simple graphical interface. Central ideas behind its design are easy of installation and of use.</p>
+
+          <p>gHRV has been implemented employing Python <a class="cite" href="#references">[Pyth]</a>, based on object oriented programming (although it also supports imperative and functional programming), giving clean and legible code, which improves software maintenance. Besides, it makes a quite efficient use of memory and it is very extensible, thanks to libraries available to programmers. These advantages make Python one of the ten most used programming languages in this moment. Appart from these benefits, Python provides:</p>
+            <ul><li>A high grade of efficiency and portability.</li>
+              <li>Efficient and flexible libraries, which allow to implement a graphical interface, advanced mathematical functions and highly customizable plotting capability.</li>
+              <li>Developing tools (IDEs or Integrated Development Environments, compilers, debuggers...) freely available for distinct operating systems.</li>
+            </ul>
+
+          <p>gHRV is a simple and easy-to-use graphical interface, and guided interaction with the user is performed in order to minimize errors and functional problems. With this purpose, the interface enables or disables interactive elements depending on the state of the interaction.</p>
+
+          <p>An important functionality of gHRV is the possibility to deal with different episodes (apnea, ischemia,...), creating or adding new episodes or deleting existing ones, and to obtain time evolution of power in frequency bands.</p>
+
+
+
+
 
           <p>More to come...</p>
 
@@ -57,8 +84,8 @@
 
           <p>Windows binary is available as a gHRV_X_YY.msi file. Installation is straightforward: double click on the downloaded file.</p>
 
-          <img src="docfigures/WinInstall.jpg" class="screenshot"/>
-          <p class="imgtxt">Dubi dubi du</p>
+          <img src="docfigures/Figure2.jpg" class="screenshot"/>
+          <p class="imgtxt">Windows installation: security warning</p>
 
           <p>More to come...</p>
 
@@ -68,9 +95,31 @@
         <dl>
           <dt>[Achar06]</dt><dd>U.R. Acharya, K.P. Joseph, N. Kannathal, C.M., Lim, J.S. Suri, Heart rate variability: a review, Medical and Biomedical Engineering and Computing 44, 1031-1051 (2006).</dd>
           <dt>[Aksel81]</dt><dd>S. Akselkrod, D. Gordon, F.A. Ubel, D.C. Shannon, A.C. Barger, R.J. Cohen, Power spectrum analysis of heart rate fluctuation: a quantitative probe of beat to beat cardiovascular control, Science 213, 220-222 (1981)</dd>
+          <dt>[Bogu11]</dt><dd>Bogunovik, HRV-Frame: Java-based framework for feature extraction from cardiac rythm, Lecture Notes in Computer Science 6747, 96-100 (2011).</dt>
           <dt>[Chang07]</dt><dd>F.C. Chang, C.K. Chang, C.C. Chiu, S.F. Hsu, Y.D. Lin, Variations of HRV Analysis in Different Approaches, In Computers in Cardiology 34, 17-20 (2007).</dd>
+          <dt>[Ibra11]</dt><dd>N.A. Ibrahim, S. Suliadi, S., Generating correlated discrete ordinal data using R and SAS IML, Computer Methods and Programs in Biomedicine, 104, 122e-132e (2011).</dd>
+          <dt>[Koso11]</dt><dd>H. Kosorus, J. Honigl, J. Kung, Using R, WEKA and RapidMiner in time series analysis of sensor data for structural health monitoring. Proceedings of DEXA 2011, 306 – 310 (2011).</dd> 
           <dt>[Malik95]</dt><dd>M. Malik, A.J. Camm, Heart rate variability. Futura (1995)</dd>
+          <dt>[MatHRV]</dt><dd><a href="http://www.macalester.edu/~kaplan/hrv/doc/">http://www.macalester.edu/~kaplan/hrv/doc/</a></dd>
+          <dt>[Nati09]</dt><dd>National Instruments. Using LabVIEW for heart rate variability analysis. Published online at <a href="http://zone.ni.com/devzone/cda/epd/p/id/5832">http://zone.ni.com/devzone/cda/epd/p/id/5832</a> on Apr 24, 2009.</dd>
+          <dt>[Nisk04]</dt><dd>J.P. Niskanen, M.P. Tarvainen, P.O. Ranta-aho, P.A. Karjalainen, Software for advanced HRV analysis, Computer Methods and Programs in Biomedicine 76, 73-81 (2004).</dd>
+          <dt>[Pyth]</dt><dd><a href="http://www.python.org">http://www.python.org</a></dd>
+          <dt>[Roca12]</dt><dd>J. Roca-Pardi&ntilde;as, M.J. Lado, P.G.Tahoces, C. Cadarso-Su&aacute;rez, Reducing false positives in a CAD scheme for detecting breast microcalcificacions: a cuantitative study with GAMs, Cancer Prevention, (Alexandros Georgakilas, Ed.), 459-476 (2012).</dd>
+          <dt>[Rodr11]</dt><dd>L. Rodr&iacute;guez-Li&ntilde;ares, A.J. M&eacute;ndez, M.J. Lado, D.N. Olivieri, X.A. Vila, X.A., I. G&oacute;mez-Conde, An open source tool for heart rate variability spectral analysis. Computer Methods and Programs in Biomedicine 103, 39-50 (2011).</dd>
+          <dt>[Sun11]</dt><dd>X. Sun, K. Wu, D. Cook, PKgraph: An R package for graphically diagnosing population pharmacokinetic models. Computer Methods and Programs in Biomedicine, 104, 461-471 (2011).</dd>
           <dt>[Task96]</dt><dd>Task Force of the European Society of Cardiology the North American Society of Pacing Electrophysiology, Heart rate variability: standards of measurement, physiological interpretation, and clinical use, Circulation 93, 1043-1065 (1996)</dd>
+
+
+          
+
+
+
+
+
+
+    
+
+          
 
 
         </dl>
