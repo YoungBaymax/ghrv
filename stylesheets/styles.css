@@ -42,8 +42,12 @@ h1, h2, h3, h4, h5, h6 {
   margin:36px 0 10px;
 }
 
-p, ul, ol, table, dl {
-  margin:0 0 22px;
+ul, ol, table, dl {
+  margin:0 0 0px;
+}
+
+p {
+  margin:0 0 10px;
 }
 
 h1, h2, h3 {
@@ -93,8 +97,13 @@ a.cite {
   font-style: italic;
 }
 
+a.toc {
+  font-weight:700;
+  color:#5C7F19;
+}
+
 em {
-	font-style: italic;
+	font-style: bold;
 }
 
 strong {

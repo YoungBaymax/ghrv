@@ -42,6 +42,14 @@
         <h1>Table of contents</h1>
           <ul>
             <li><a class="toc" href="#overview">Overview</a></li>
+            <li><a class="toc" href="#gs">Getting started</a>
+            <ul>
+              <li><a class="toc" href="#gs:ld">License and disclaimer</a></li>
+              <li><a class="toc" href="#gs:sr">System Requirements</a></li>
+              <li><a class="toc" href="#gs:d">Downloading <strong>gHRV</strong></a></li>
+              <li><a class="toc" href="#gs:in">Installing <strong>gHRV</strong></a></li>
+            </ul></li>
+
             <li><a class="toc" href="#references">References</a></li>
           </ul>
 
@@ -58,36 +66,82 @@
 
           <p>Many applications can be found in the literature, including generation of correlated discrete ordinal data arising from longitudinal studies of medical research <a class="cite" href="#references">[Ibra11]</a>, detection of breast cancer <a class="cite" href="#references">[Roca12]</a>, population pharmacokinetic modeling for analyzing drugs effects and individual variations <a class="cite" href="#references">[Sun11]</a>, or time-series analysis <a class="cite" href="#references">[Koso11]</a>.</p>
 
-          <p>Due to the growing scientific community developing specific software, and attending to the requirements of researchers, that usually need to unify software functionality into one open source and easily extendible tool, we have developed gHRV, a software package for HRV analysis (partially based on RHRV <a class="cite" href="#references">[Rodr11]</a>), in an attempt to help clinicians in the analysis of the heart rate. The gHRV software integrates partially RHRV as mathematical tool, but the user is offered a powerful and simple graphical interface. Central ideas behind its design are easy of installation and of use.</p>
+          <p>Due to the growing scientific community developing specific software, and attending to the requirements of researchers, that usually need to unify software functionality into one open source and easily extendible tool, we have developed <strong>gHRV</strong>, a software package for HRV analysis (partially based on RHRV <a class="cite" href="#references">[Rodr11]</a>), in an attempt to help clinicians in the analysis of the heart rate. The <strong>gHRV</strong> software integrates partially RHRV as mathematical tool, but the user is offered a powerful and simple graphical interface. Central ideas behind its design are easy of installation and of use.</p>
 
-          <p>gHRV has been implemented employing Python <a class="cite" href="#references">[Pyth]</a>, based on object oriented programming (although it also supports imperative and functional programming), giving clean and legible code, which improves software maintenance. Besides, it makes a quite efficient use of memory and it is very extensible, thanks to libraries available to programmers. These advantages make Python one of the ten most used programming languages in this moment. Appart from these benefits, Python provides:</p>
-            <ul><li>A high grade of efficiency and portability.</li>
+          <p><strong>gHRV</strong> has been implemented employing Python <a class="cite" href="#references">[Pyth]</a>, based on object oriented programming (although it also supports imperative and functional programming), giving clean and legible code, which improves software maintenance. Besides, it makes a quite efficient use of memory and it is very extensible, thanks to libraries available to programmers. These advantages make Python one of the ten most used programming languages in this moment. Appart from these benefits, Python provides:</p>
+            <p><ul><li>A high grade of efficiency and portability.</li>
               <li>Efficient and flexible libraries, which allow to implement a graphical interface, advanced mathematical functions and highly customizable plotting capability.</li>
               <li>Developing tools (IDEs or Integrated Development Environments, compilers, debuggers...) freely available for distinct operating systems.</li>
-            </ul>
+            </ul></p>
 
-          <p>gHRV is a simple and easy-to-use graphical interface, and guided interaction with the user is performed in order to minimize errors and functional problems. With this purpose, the interface enables or disables interactive elements depending on the state of the interaction.</p>
+          <p><strong>gHRV</strong> is a simple and easy-to-use graphical interface, and guided interaction with the user is performed in order to minimize errors and functional problems. With this purpose, the interface enables or disables interactive elements depending on the state of the interaction.</p>
 
-          <p>An important functionality of gHRV is the possibility to deal with different episodes (apnea, ischemia,...), creating or adding new episodes or deleting existing ones, and to obtain time evolution of power in frequency bands.</p>
+          <p>An important functionality of <strong>gHRV</strong> is the possibility to deal with different episodes (apnea, ischemia,...), creating or adding new episodes or deleting existing ones, and to obtain time evolution of power in frequency bands.</p>
+
+          <p>The following main functionalities are provided:</p>
+          <p><ul>
+            <li>Heartbeats: file loading, automatic filtering, manual filtering and interpolation.</li>
+            <li>Episodes: file loading, removing all episodes and editing.</li>
+            <li>Frame-based evolution: time evolution of power in frequency bands.</li>
+            <li>Poincar&eacute; plots: representation of the Poincar&eacute; plots of the RR (beat-to-beat) intervals.</li>
+            <li>Significance analysis: statistical analysis of spectral parameters, in and out episodes.</li>
+          </ul></p>
+
+          <p>Details of the implementation and installation instructions are now given in the next Section.</p>
 
 
+        <h1 id="gs">Getting started</h1>
+
+        <h2 id="gs:ld">License and disclaimer</h2>
+
+        <p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+
+        <p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+
+        <h2 id="gs:sr">System Requirements</h2>
+
+        <p>To run gHRV on you computer, you can select Windows, Linux or Mac OSX operating systems. Minimal system requirements are:</p>
+
+        <p><dl>
+          <dt>Windows</dt><dd>Windows XP or newer, 32 or 64 bits.</dd>
+          <dt>Mac OSX</dt><dd>MacOSX Lion or newer.</dd>
+          <dt>Linux</dt><dd>Recent distribution based on deb packages. Tested on Ubuntu 11.10, 12.04 LTS and 12.10.</dd>
+        </dl></p>
+
+        <h2 id="gs:d" >Downloading <strong>gHRV</strong></h2>
+
+        <p>Previous to the installation of <strong>gHRV</strong>, you should download it from <a href="http://milegroup.github.com/ghrv/packages.html">http://milegroup.github.com/ghrv/packages.html</a>. <strong>gHRV</strong> is distributed as free software (GNU GPL) and binaries for Windows, MacOSX and Debian/Ubuntu systems are provided as well.</p>
+
+        <p>For downloading <strong>gHRV</strong>, select the corresponding version for you operating system. Different versions are avalaible. Version 1.1 is a stable and recommended version, that will be explained in this Manual. In this documentation, X and YY refer to the version and the subversion of the <strong>gHRV</strong> program.</p>
+
+        <p>Appart from the binaries for the different operating systems, you can also download the source code (explained later in this Section), and example files, among others:</p>
+        <p><ul>
+          <li>An ascii file containing beats positions: <strong>beat_ascii.txt</strong>.</li>
+          <li>An ascii file containing episodes: <strong>episodes.txt</strong>.</li>
+          <li>A simple gHRV project with episodes: <strong>SimpleProject.gHRV</strong>.</li>
+        </ul></p>
 
 
+        <h2  id="gs:in">Installing <strong>gHRV</strong></h2>
 
-          <p>More to come...</p>
+        <p>Once you have downloaded <strong>gHRV</strong>, you must install it in your computer as follows.</p>
 
-        <h1>Getting started</h1>
+        <h3 >Windows binaries</h3>
 
-        <h2>Installing gHRV</h2>
+        <p>Windows binary is available as a <strong>gHRV_X_YY.msi file</strong>. Installation is straightforward: double click on the downloaded file. First, the installer must be authorized to proceed.</p>
 
-        <h3>Windows binaries</h3>
+        <img src="docfigures/Figure2.jpg" class="screenshot"/>
+        <p class="imgtxt">Windows installation: security warning</p>
 
-          <p>Windows binary is available as a gHRV_X_YY.msi file. Installation is straightforward: double click on the downloaded file.</p>
+        <p>The <strong>gHRV</strong> setup wizard is now open; just follow the instructions to complete the installation process.</p>
 
-          <img src="docfigures/Figure2.jpg" class="screenshot"/>
-          <p class="imgtxt">Windows installation: security warning</p>
+        <img src="docfigures/Figure3.jpg" class="screenshot"/>
+        <p class="imgtxt">Windows installation: setup wizard</p>
 
-          <p>More to come...</p>
+        <p>After license agreement, <strong>gHRV</strong> is installed on your system. Installation also creates a link of the tool in your desktop.</p>
+        
+        <p><strong>gHRV</strong> has been tested on Windows XP and Windows 7 (32 and 64 bits). </p>
+
 
 
 
