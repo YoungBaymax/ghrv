@@ -283,6 +283,7 @@ h1.header {
 	font-weight: 300;
 	line-height: 1.3em;
 	border-bottom: none;
+  text-align: left;
 	margin-top: 0;
 }
 
@@ -345,6 +346,24 @@ a.buttons {
 	text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
 	padding: 2px 2px 2px 22px;
 	height: 30px;
+}
+
+a.buttonsdoc {
+  -webkit-font-smoothing: antialiased;
+  background: url(../images/book.png) no-repeat;
+  font-weight: normal;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
+  padding: 2px 2px 2px 22px;
+  height: 30px;
+}
+
+a.buttonspack {
+  -webkit-font-smoothing: antialiased;
+  background: url(../images/package_white.png) no-repeat;
+  font-weight: normal;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
+  padding: 2px 2px 2px 22px;
+  height: 30px;
 }
 
 a.github {
