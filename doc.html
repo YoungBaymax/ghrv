@@ -157,11 +157,39 @@
 
         <p>Just drag this file to the <strong>Applications</strong> folder.</p>
 
-         <img src="docfigures/Figure5.jpg" class="screenshot"/>
+        <img src="docfigures/Figure5.jpg" class="screenshot"/>
         <p class="imgtxt">Installing <strong>gHRV</strong> in OSX</p>
 
         <p>Then, you can eject the unit that was mounted by the <strong>.dmg</strong> file. <strong>gHRV</strong> has been tested on OSX Mountain Lion and OSX Lion.</p>
 
+        <h3>Linux</h3>
+        <p><strong>gHRV</strong> is distributed as a <strong>gHRV_X.YY_all.deb</strong> package. The easiest way to install is to download this package, open a terminal and change to the directory where the file is. Then use the commands:</p>
+        <pre>$ sudo apt-get install gdebi<br/>$ sudo gdebi gHRV_X.YY_all.deb</pre>
+        <p>gdebi installs gHRV and its dependencies. The program is avalaible both in the Start menu and in console mode as <strong>gHRV</strong>.</p>
+        <p>You can also install gHRV with the Software Centre.</p>
+
+        <img src="docfigures/Figure6.jpg" class="screenshot"/>
+        <p class="imgtxt">Installing <strong>gHRV</strong> in Linux Software Centre</p>
+
+        <p>Click on <strong>Open with</strong> and, on the next step, click on <strong>Install</strong>.</p>
+
+        <img src="docfigures/Figure7.jpg" class="screenshot"/>
+        <p class="imgtxt">Installing <strong>gHRV</strong> in Linux Software Centre (II)</p>
+
+        <p><strong>gHRV</strong> has been tested on a Ubuntu 11.10, 12.04 LTS and 12.10 systems</p>
+
+        <h3>Source Code</h3>
+        <p><strong>gHRV</strong> sources are distributed as a <strong>gHRV_X.YY.tar.gz</strong>. Advanced users can run the program from the source code. A working installation is needed for the Python programming language with the following libraries:</p>
+        <p><ul>
+          <li>Matplotlib</li>
+          <li>wxPython</li>
+          <li>Numpy</li>
+          <li>Scipy</li>
+        </ul></p>
+        <p>In Linux debian-based systems, just open a terminal and use the following command:</p>
+        <pre>$ sudo apt-get install python-numpy python-wxgtk2.8 python-matplotlib python-scipy</pre>
+        <p>Then, go to the directory where the .tar.gz was extracted and use:</p>
+        <pre>$ python gHRV.py</pre>
 
 
 
