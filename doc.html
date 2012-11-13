@@ -52,6 +52,7 @@
               <li><a class="toc" href="#gs:sr">System Requirements</a></li>
               <li><a class="toc" href="#gs:d">Downloading <strong>gHRV</strong></a></li>
               <li><a class="toc" href="#gs:in">Installing <strong>gHRV</strong></a></li>
+              <li><a class="toc" href="#gs:un">Uninstalling <strong>gHRV</strong></a></li>
             </ul></li>
 
             <li><a class="toc" href="#references">References</a></li>
@@ -132,7 +133,7 @@
 
         <p>Once you have downloaded <strong>gHRV</strong>, you must install it in your computer as follows.</p>
 
-        <h3>Windows binaries</h3>
+        <h3>Windows</h3>
 
         <p>Windows binary is available as a <strong>gHRV_X_YY.msi file</strong>. Installation is straightforward: double click on the downloaded file. First, the installer must be authorized to proceed.</p>
 
@@ -148,7 +149,7 @@
         
         <p><strong>gHRV</strong> has been tested on Windows XP and Windows 7 (32 and 64 bits). </p>
 
-        <h3>OSX binaries</h3>
+        <h3>OSX</h3>
 
         <p>OSX binary is distributed as a <strong>gHRV_X_YY.dmg</strong> file. To install, open the file and a new window appears with a file named gHRV.app inside.</p>
 
@@ -162,7 +163,7 @@
 
         <p>Then, you can eject the unit that was mounted by the <strong>.dmg</strong> file. <strong>gHRV</strong> has been tested on OSX Mountain Lion and OSX Lion.</p>
 
-        <h3>Linux</h3>
+        <h3>Deb-based linux systems</h3>
         <p><strong>gHRV</strong> is distributed as a <strong>gHRV_X.YY_all.deb</strong> package. The easiest way to install is to download this package, open a terminal and change to the directory where the file is. Then use the commands:</p>
         <pre>$ sudo apt-get install gdebi<br/>$ sudo gdebi gHRV_X.YY_all.deb</pre>
         <p>gdebi installs gHRV and its dependencies. The program is avalaible both in the Start menu and in console mode as <strong>gHRV</strong>.</p>
@@ -178,7 +179,7 @@
 
         <p><strong>gHRV</strong> has been tested on a Ubuntu 11.10, 12.04 LTS and 12.10 systems</p>
 
-        <h3>Source Code</h3>
+        <h3>Source package</h3>
         <p><strong>gHRV</strong> sources are distributed as a <strong>gHRV_X.YY.tar.gz</strong>. Advanced users can run the program from the source code. A working installation is needed for the Python programming language with the following libraries:</p>
         <p><ul>
           <li>Matplotlib</li>
@@ -190,6 +191,25 @@
         <pre>$ sudo apt-get install python-numpy python-wxgtk2.8 python-matplotlib python-scipy</pre>
         <p>Then, go to the directory where the .tar.gz was extracted and use:</p>
         <pre>$ python gHRV.py</pre>
+
+        <h2 id="gs:un">Uninstalling <strong>gHRV</strong></h2>
+
+        <p>If you want to uninstall <strong>gHRV</strong> from your computer, follow the next instructions.</p>
+
+        <h3>Windows</h3>
+
+        <p>To uninstall <strong>gHRV</strong>, go to <strong>Start -> Control Panel -> Add or Remove programs</strong>, select <strong>gHRV</strong> and press the <strong>Remove</strong> button.</p>
+
+        <h3>OSX</h3>
+
+        <p>To uninstall <strong>gHRV</strong>, just drag the <strong>gHRV</strong> program from the <strong>Applications</strong> folder to the <strong>Trash</strong> folder.</p>
+
+        <h3>Deb-based linux systems</h3>
+
+        <p>To uninstall <strong>gHRV</strong>, open a terminal and use the command:</p>
+
+        <pre>$ sudo apt-get remove ghrv</pre>
+
 
 
 
