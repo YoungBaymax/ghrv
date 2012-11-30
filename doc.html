@@ -48,11 +48,13 @@
             <li><a class="toc" href="#overview">Overview</a></li>
             <li><a class="toc" href="#gs">Getting started</a>
             <ul>
-              <li><a class="toc" href="#gs:ld">License and disclaimer</a></li>
+              <li><a class="toc" href="#gs:ld">License and Disclaimer</a></li>
               <li><a class="toc" href="#gs:sr">System Requirements</a></li>
-              <li><a class="toc" href="#gs:d">Downloading <strong>gHRV</strong></a></li>
+              <li><a class="toc" href="#gs:do">Downloading <strong>gHRV</strong></a></li>
               <li><a class="toc" href="#gs:in">Installing <strong>gHRV</strong></a></li>
               <li><a class="toc" href="#gs:un">Uninstalling <strong>gHRV</strong></a></li>
+              <li><a class="toc" href="#gs:up">Updating <strong>gHRV</strong></a></li>
+              <li><a class="toc" href="#gs:ki">Known Issues <strong>gHRV</strong></a></li>
             </ul></li>
 
             <li><a class="toc" href="#references">References</a></li>
@@ -115,7 +117,7 @@
           <dt>Linux</dt><dd>Recent distribution based on deb packages. Tested on Ubuntu 11.10, 12.04 LTS and 12.10.</dd>
         </dl></p>
 
-        <h2 id="gs:d" >Downloading <strong>gHRV</strong></h2>
+        <h2 id="gs:do" >Downloading <strong>gHRV</strong></h2>
 
         <p>Previous to the installation of <strong>gHRV</strong>, you should download it from <a href="http://milegroup.github.com/ghrv/packages.html">http://milegroup.github.com/ghrv/packages.html</a>. <strong>gHRV</strong> is distributed as free software (GNU GPL) and binaries for Windows, MacOSX and Debian/Ubuntu systems are provided as well.</p>
 
@@ -211,6 +213,32 @@
         <pre>$ sudo apt-get remove ghrv</pre>
 
 
+        <h2 id="gs:up">Updating <strong>gHRV</strong></h2>
+
+        <p>Updating <strong>gHRV</strong> to other versions is an easy task that can be performed with the following instructions.</p>
+
+        <h3>Windows</h3>
+
+        <p>To update <strong>gHRV</strong> to a newer version, just make a new install. The installation procedure updates the program automatically.</p>
+
+        <h3>OSX</h3>
+
+        <p>Updates are installed using the same procedure as new installs. The system asks for confirmation if the new version overwrites the old one or not.</p>
+
+        <h3>Deb-based linux systems</h3>
+
+        <p>Updates are installed using the same procedure as new install with command <strong>gdebi</strong>.</p>
+
+
+<h2 id="gs:ki">Known Issues <strong>gHRV</strong></h2>
+
+        <h3>OSX</h3>
+
+        <p>There is some focus problem in OSX implementation of wxpython libraries. The effect of this problem is that sometimes, just after running <strong>gHRV</strong>, new windows are not shown. Normally, clicking on the <strong>gHRV</strong> icon in the dock solves this problem.</p>
+
+        <h3>Deb-based linux systems</h3>
+
+        <p>If Linux version is called from a terminal, there is a warning (Gtk-WARNING **: Unable to retrieve the file info...) in the terminal when saving a new project. This is caused by the implementation of file dialogs in some libraries. Users can ignore this message since the file is saved correctly.</p>
 
 
         <h1 id="references">References</h1>
