@@ -165,7 +165,7 @@
 
         <h3>OSX</h3>
 
-        <p>OSX binary is distributed as a <strong>gHRV_X_YY.dmg</strong> file. To install, open the file and a new window appears with a file named gHRV.app inside.</p>
+        <p>OSX binary is distributed as a <strong>gHRV_X_YY.dmg</strong> file. To install, open the file and a new window appears with a file named gHRV.app inside. Depending on the security configuration of the computer, it may be possible that the system does not allow to install the program. In this case, the simplest and easiest way is to CTRL-click (or right click) the <strong>gHRV_X_YY.dmg</strong> file, and on the revealed context menu, choose ‘Open.’ </p>
 
         <img src="docfigures/Figure4.jpg" class="screenshot"/>
         <p class="imgtxt">OSX installation: folder containing the installation files for <strong>gHRV</strong></p>
@@ -261,7 +261,7 @@
         <img src="docfigures/Figure8.jpg" class="screenshot"/>
         <p class="imgtxt">Initial view for <strong>gHRV</strong></p>
 
-        <p>Once the application is running, the appearance of <strong>gHRV</strong> is quite similar to those that can be present in other widely used softwares.</p>
+        <p>Once the application is running, the appearance of <strong>gHRV</strong> is quite similar to those that can be present in other widely used programs.</p>
 
         <img src="docfigures/Figure9.jpg" class="screenshot"/>
         <p class="imgtxt"><strong>gHRV</strong> icon: double-click for executing</p>
@@ -284,10 +284,10 @@
         <img src="docfigures/Figure11.jpg" class="screenshot"/>
         <p class="imgtxt">Initial project loading error message</p>       
 
-        <p>When the selected project is retrieved, it can be observed that the <strong>Load</strong> options are all blurred (not allowed), and the <strong>Save, Clear</strong> and <strong>Settings </strong> options from the <strong>Projects Panel</strong> are now active, and can be executed.</p> 
+        <p>When the selected project is retrieved, it can be observed that the <strong>Load</strong> options are all disabled, and the <strong>Save, Clear</strong> and <strong>Settings </strong> options from the <strong>Projects Panel</strong> are now enabled.</p> 
 
         <img src="docfigures/Figure12.jpg" class="screenshot"/>
-        <p class="imgtxt">I<strong>gHRV</strong> project retrieved from SimpleProjectgHRVfile</p>       
+        <p class="imgtxt"><strong>gHRV</strong> project retrieved from SimpleProjectgHRVfile</p>       
 
         <p>In the upper left corner of the graph area, options for zooming or reducing the graph, or for displacing the signal points along the time axis can be observed.</p>
 
@@ -470,7 +470,7 @@
         <img src="docfigures/Figure37.jpg" class="screenshot"/>
         <p class="imgtxt"> Visualization options for the spectral analysis </p>
 
-        <p>By clicking on the <strong>Significance</strong> option, users can also select the parameter to be included study. The plot will show the distribution of the selected parameter inside/outside an episode, or in two different episodes. A Welch's t-test is performed on these values and the result of this test is shown at the bottom of the window. Click on the Close button when you have finished the significance analysis.</p>
+        <p>By clicking on the <strong>Significance</strong> option, users can also select the parameter to be included study. The plot will show the distribution of the selected parameter inside/outside an episode, or in two different episodes. A Kolmogorov-Smirnov test for statistic independence is performed on these values and the result of this test is shown at the bottom of the window. Click on the Close button when you have finished the significance analysis.</p>
 
         <img src="docfigures/Figure38.jpg" class="screenshot"/>
         <p class="imgtxt"> Significance option for a selected parameter </p>
@@ -488,22 +488,28 @@
         <p>Finally, click the <strong>End</strong> option when you have finished the temporal evolution analysis.</p>
 
         <h3>Poincaré Plot</h3>
-        <p>The last option of the <strong>Tools Panel</strong> is the possibility of obtaining the <strong>Poincaré plot</strong>, used for quanitfying the self-similarity of signals. In this particular case, it represents a scatterplot of the current R-R interval, plotted against the preceding R-R interval, and provides gloabl and detailed beat-to-beat information on the behavior of the heart.</p>
 
-        <p>By clicking oh the <strong>Poincaré plot</strong> button, the global plot for the whole heart rate data is presented on a new window.</p>
+        <p>The last button of the <strong>Tools Panel</strong> is for obtaining the <strong>Poincaré plot</strong>, useful for quantifying the self-similarity of signals by representing a scatterplot of each RR interval against the preceding ones. <strong>Poincaré plots</strong> provide global and detailed beat-to-beat information on the heart behavior.</p>
+
+        <p>By clicking on the <strong>Poincaré plot</strong> button, a new plot for the whole record is presented on a new window.</p>
 
         <img src="docfigures/Figure41.jpg" class="screenshot"/>
-        <p class="imgtxt"> Poincaré plot for the global ECG </p>
+        <p class="imgtxt">Global Poincaré plot</p>
 
         <p>The user can also select different Poincaré plots, among the different episodes and intervals present in the data that are being analyzed.</p>
 
         <img src="docfigures/Figure42.jpg" class="screenshot"/>
         <p class="imgtxt"> Two different Poincaré plots for two types of episodes</p>
 
-        <p>Finally, the plot can be saved to a selected directory, clicking on ‘s’ on the lower menu bar.</p>
+        <p>The plot can be saved to a selected directory, clicking <strong>Save</strong> on the upper left corner of the plot.</p>
 
         <img src="docfigures/Figure43.jpg" class="screenshot"/>
         <p class="imgtxt"> Saving a Poincaré plot.</p>
+
+        <p>Finally, the limits of the plot can be customized, allowing the users to compare Poincaré plots of different records, clicking <strong>Config</strong> on the upper left corner of the plot.</p>
+
+        <img src="docfigures/Figure43b.jpg" class="screenshot"/>
+        <p class="imgtxt"> Customizing the limits in a Poincaré plot.</p>
 
         <h3>Report</h3>
         <p>Finally, a report including the analysis performed in the previous stages can be generated, by clicking the <strong>Report</strong> option. A resume window including the data analysis and results in then presented.</p>
