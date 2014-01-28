@@ -429,35 +429,36 @@
 
         <h2 id="ugs:tp">Tools Panel</h2>
 
-        <p>Functionalities on the <strong>Tools Panel</strong> can only be executed when a heart rate signal is loaded.</p>
+        <p>Functionalities on the <strong>Tools Panel</strong> can only be used when a heart rate signal is loaded.</p>
 
         <img src="docfigures/Figure33.jpg" class="screenshot"/>
         <p class="imgtxt"> Options for the tools panel </p>
 
         <h3>Interpolate</h3>
-        <p>This options allows to interpolate the heart rate signal, applying a cubic spline interpolation. The default frequency for interpolation is 4 Hz, even although it can be modified in the <strong>Config</strong> option of the <strong>gHRV Panel</strong>, that will be explained in the corresponding Section of this Manual. A new heart rate signal adequate for performing the spectral analysis appears in the graphical window, preserving the episodes information (if existing).</p>
+        <p>This button interpolates the heart rate signal, applying a linear interpolation. The default frequency for interpolation is 4 Hz, even although it can be modified in the <strong>Config</strong> option of the <strong>gHRV Panel</strong> (this will be explained in the corresponding Section of this Manual). A new heart rate signal adequate for Fourier  spectral analysis appears in the graphical window, preserving the episodes information (if present).</p>
 
         <img src="docfigures/Figure34.jpg" class="screenshot"/>
-        <p class="imgtxt"> Interpolation operation in <strong>gHRV</strong></p>
+        <p class="imgtxt"> Interpolated signal in <strong>gHRV</strong></p>
 
-        <p><strong>Interpolation</strong> option is now blurred, and it becomes possible to click in the <strong>Frame-based evolution</strong> button. With this option, spectral analysis is possible.</p>
+        <p><strong>Interpolation</strong> button is now disabled, and it becomes possible to click in the <strong>Frame-based evolution</strong> button for performing spectral analysis.</p>
 
         <h3>Frame-based evolution</h3>
 
-        <p>To perform power spectral analysis, the spectrogram of the signal is first calculated, employing the Sort-Time Fourier Transform (STFT), with a window size and a displacement value of 120 10, respectively. These default values can also be modified in the <strong>Config</strong> option of the <strong>gHRV</strong> panel. Zero-padding of 1024 pixels is also applied. Next, the power in various spectral bands is obtained:</p>
+        <p>In order to estimate the spectral power, spectrogram of the signal is first calculated, employing the SHort-Time Fourier Transform (STFT). A Hamming window is used with default values of width and shift of 120 and 60 sec., respectively. These default values can be modified in the <strong>Config</strong> option of the <strong>gHRV</strong> panel. Next, the power in various spectral bands is obtained:</p>
 
         <ul>
+          <li>ULF: power in the ULF band (0.0-0.03 Hz).</li>
           <li>VLF: power in the VLF band (0.03-0.05 Hz).</li>
           <li>LF: power in the LF band (0.05-0.15 Hz).</li>
           <li>HF: power in the HF band (0.15-0.4Hz).</li>
         </ul>
 
-        <p>These default values can be modified in the <strong>Config</strong> option from the <strong>gHRV</strong> panel. Other parameters are also provided:</p>
+        <p>These limits for the bands can be modified in the <strong>Config</strong> option from the <strong>gHRV</strong> panel. Other parameters are also calculated:</p>
         <ul>
           <li>LF/HF ratio: defined as the ratio for the LF and the HF bands.</li>
           <li>Power: total value for the spectral power.</li>
           <li>Mean HR: mean heart rate value.</li>
-          <li>HR STD: corresponding standard deviation.</li>
+          <li>HR STD: heart rate standard deviation.</li>
           <li>pNN50: percentage of differences between adjacent intervals that are >50 msec.</li>
           <li>rMSSD: square root of the mean of the squares of the differences between adjacent intervals.</li>
           <li>ApEn: approximate entropy.</li>
@@ -465,64 +466,59 @@
           <li>Heart rate: data employed to perform the analysis.</li>
         </ul>
 
-        <p>For performing spectral analysis, just click the <strong>Frame-based evolution </strong> option, and a window indicating the calculation process in progress will appear.</p>
+        <p>For performing spectral analysis, just click the <strong>Frame-based evolution </strong> button, and a window indicating the calculation process in progress will appear.</p>
 
         <img src="docfigures/Figure35.jpg" class="screenshot"/>
         <p class="imgtxt"> Frame-based evolution calculation </p>
 
-        <p>As a result, a resulting window containing information about the spectral parameters is presented. Information for the previous defined episodes is also preserved.</p>
+        <p>After the calculation is finished, a window containing information about the parameters is presented. Information of episodes is also shown (if present in the data).</p>
 
         <img src="docfigures/Figure36.jpg" class="screenshot"/>
-        <p class="imgtxt"> Spectral analysis performed with <strong>gHRV</strong> </p>
+        <p class="imgtxt"> Frame-based analysis in <strong>gHRV</strong> </p>
 
-        <p>Click on the upper rigth panel to visualize or hide spectral bands and values. As an example, you can select LF/HF, Mean HR, HR STD rMSSD and ApEn, and then click the <strong>Refresh</strong> option, and visualization will be automatically updated to the user selection.</p>
+        <p>In the upper right panel users can select which parameters are to be included in the plot.</p>
 
-        <img src="docfigures/Figure37.jpg" class="screenshot"/>
-        <p class="imgtxt"> Visualization options for the spectral analysis </p>
-
-        <p>By clicking on the <strong>Significance</strong> option, users can also select the parameter to be included study. The plot will show the distribution of the selected parameter inside/outside an episode, or in two different episodes. A Kolmogorov-Smirnov test for statistic independence is performed on these values and the result of this test is shown at the bottom of the window. Click on the Close button when you have finished the significance analysis.</p>
+        <p>The <strong>Significance</strong> button opens a new window containing a plot that shows the distribution of the selected parameter inside/outside an episode, or in two different episodes. A Kolmogorov-Smirnov test for statistic independence is performed on these values and the result of this test is shown at the bottom of the window. Users can select which parameter is to be considered in this study.</p>
 
         <img src="docfigures/Figure38.jpg" class="screenshot"/>
-        <p class="imgtxt"> Significance option for a selected parameter </p>
+        <p class="imgtxt"> Significance study for the LF/HF parameter </p>
 
-        <p>A txt report can also be obtained with the <strong>Report txt </strong>option. By clicking in the button, a window for selecting the parameters to be included appears.</p>
+        <p>A txt report can also be obtained with the <strong>Export txt</strong> button. By clicking in this button, a window for selecting the parameters to be included appears.</p>
 
         <img src="docfigures/Figure39.jpg" class="screenshot"/>
-        <p class="imgtxt"> Generation of a txt report for selected parameters </p>
+        <p class="imgtxt"> Generation of a txt file containing the selected parameters </p>
 
         <p>When the parameters are selected, the report will be saved at the selected directory.</p>
 
         <img src="docfigures/Figure40.jpg" class="screenshot"/>
-        <p class="imgtxt"> Saving a txt report </p>
-
-        <p>Finally, click the <strong>End</strong> option when you have finished the temporal evolution analysis.</p>
+        <p class="imgtxt"> Saving a txt file containing frame-based parameters</p>
 
         <h3>Poincaré Plot</h3>
 
         <p>The last button of the <strong>Tools Panel</strong> is for obtaining the <strong>Poincaré plot</strong>, useful for quantifying the self-similarity of signals by representing a scatterplot of each RR interval against the preceding ones. <strong>Poincaré plots</strong> provide global and detailed beat-to-beat information on the heart behavior.</p>
 
-        <p>By clicking on the <strong>Poincaré plot</strong> button, a new plot for the whole record is presented on a new window.</p>
+        <p>By clicking on the <strong>Poincaré plot</strong> button, a plot for the whole record is presented on a new window.</p>
 
         <img src="docfigures/Figure41.jpg" class="screenshot"/>
         <p class="imgtxt">Global Poincaré plot</p>
 
-        <p>The user can also select different Poincaré plots, among the different episodes and intervals present in the data that are being analyzed.</p>
+        <p>Users can also select different Poincaré plots, among the different episodes and intervals present in the data that are being analyzed.</p>
 
         <img src="docfigures/Figure42.jpg" class="screenshot"/>
         <p class="imgtxt"> Two different Poincaré plots for two types of episodes</p>
 
-        <p>The plot can be saved to a selected directory, clicking <strong>Save</strong> on the upper left corner of the plot.</p>
+        <p>The plot can be saved to a file, clicking <strong>Save</strong> on the upper left corner of the plot.</p>
 
         <img src="docfigures/Figure43.jpg" class="screenshot"/>
         <p class="imgtxt"> Saving a Poincaré plot.</p>
 
-        <p>Finally, the limits of the plot can be customized, allowing the users to compare Poincaré plots of different records, clicking <strong>Config</strong> on the upper left corner of the plot.</p>
+        <p>Finally, the limits of the plot can be customized, allowing the users to compare Poincaré plots of different records, by clicking <strong>Config</strong> on the upper left corner of the plot.</p>
 
         <img src="docfigures/Figure43b.jpg" class="screenshot"/>
         <p class="imgtxt"> Customizing the limits in a Poincaré plot.</p>
 
         <h3>Report</h3>
-        <p>Finally, a report including the analysis performed in the previous stages can be generated, by clicking the <strong>Report</strong> option. A resume window including the data analysis and results in then presented.</p>
+        <p>A report including the analysis performed in the previous stages can be generated, by clicking the <strong>Report</strong> button. A resume window including the analysis of the data and results is then presented.</p>
 
         <img src="docfigures/Figure44.jpg" class="screenshot"/>
         <p class="imgtxt"> Final report (1)</p>
@@ -533,38 +529,38 @@
         <img src="docfigures/Figure46.jpg" class="screenshot"/>
         <p class="imgtxt"> Final report (3)</p>
 
-        <p>The user can also save the previous report as an HTML fiel, by clicking on the corresponding option.</p>
+        <p>The user can also save a report as an HTML file, by clicking on the <strong>Save as HTML...</strong> button.</p>
 
         <img src="docfigures/Figure47.jpg" class="screenshot"/>
         <p class="imgtxt"> Saving options for the final report </p>
 
-        <p>At the present moment, the <trong>Open in browser</strong> is not possible; it will be at the user’s disposal in the next version of <strong>gHRV</strong>.</p>
+        <p>At the present moment, the <trong>Open in browser</strong> button is not working in all the operating systems; it will be in a future version of <strong>gHRV</strong>.</p>
 
         <h2 id="ugs:gp"><strong>gHRV</strong> Panel</h2>
 
-       <p>The last panel of the <strong>gHRV</strong> interface is <strong>gHRV Panel</strong>.</p>
+       <p>The last panel of the <strong>gHRV</strong> interface is <strong>gHRV</strong> panel.</p>
 
        <img src="docfigures/Figure48.jpg" class="screenshot"/>
        <p class="imgtxt"> . Options for the <strong>gHRV</strong> panel </p>
 
        <h3>About</h3>
-       <p>Click on the <strong>About</strong> option to obtain information about <strong>gHRV</strong>.</p>
+       <p>Click on the <strong>About</strong> button to obtain information about <strong>gHRV</strong>.</p>
 
        <img src="docfigures/Figure49.jpg" class="screenshot"/>
        <p class="imgtxt"> About option for the <strong>gHRV</strong> panel </p>
 
        <h3>Config</h3>
-       <p><strong>Config</strong> allows the user to set default values for parameters.</p>
+       <p><strong>Config</strong> allows users to set values for parameters.</p>
 
        <img src="docfigures/Figure50.jpg" class="screenshot"/>
        <p class="imgtxt"> Modification of default parameters for spectral analysis </p>
 
-       <p>The <strong>Config</strong> option allows to modify the parameters of the analysis, such as the interpolation frequency for filtering the heart rate data, adjusting either the window size or shift, as well as to vary the limits for the frequency bands. Just rewrite the modified value and then press the <strong>Set as default</strong> button. To retrieve the default values, press the <strong>Reset</strong> option.</p>
+       <p>The analysis parameter that are configurable by users are interpolation frequency, window size and shift, and limits for the frequency bands. Just rewrite the value and then press the <strong>Set as default</strong> button. To retrieve the default values, press the <strong>Reset</strong> option.</p>
 
-       <p>Notice that if there is an active project in <strong>gHRV</strong>, this function does not change project's settings: to modify settings of project, it must be done with <strong>Settings</strong> button in the first group of buttons.</p>
+       <p>Notice that if there is an active project in <strong>gHRV</strong>, this function does not change project's settings: to modify settings of project, it must be done by clicking <strong>Settings</strong> button in the first group of buttons.</p>
 
        <h3>Quit</h3>
-       <p>Just click the <strong>Quit</strong> option if you want to exit the program. A new window asking for confirmation appears.</p>
+       <p>Just click the <strong>Quit</strong> button if you want to exit the program. A new window asking for confirmation appears.</p>
 
        <img src="docfigures/Figure51.jpg" class="screenshot"/>
        <p class="imgtxt"> Exiting window for <strong>gHRV</strong></p>
