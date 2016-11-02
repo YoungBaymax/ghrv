@@ -189,7 +189,7 @@
         <img src="docfigures/Figure7.jpg" class="screenshot"/>
         <p class="imgtxt">Installing <strong>gHRV</strong> in Linux Software Centre (II)</p>
 
-        <p><strong>gHRV</strong> has been tested on all versions of Ubuntu desktop from 11.10 to 13.10.</p>
+        <p><strong>gHRV</strong> has been tested on Ubuntu desktop from 11.10. Users of Ubuntu 16.04 and newer must install gHRV 1.9</p>
 
         <h3>Source package</h3>
         <p><strong>gHRV</strong> sources are distributed as a <strong>gHRV_X.YY.tar.gz</strong>. Advanced users can run the program from the source code. A working interpreter of the Python programming language is needed with the following libraries:</p>
@@ -199,8 +199,11 @@
           <li>Numpy</li>
           <li>Scipy</li>
         </ul></p>
-        <p>In Linux debian-based systems, just open a terminal and use the following command:</p>
-        <pre>$ sudo apt-get install python-numpy python-wxgtk2.8 python-matplotlib python-scipy</pre>
+        <p>In Linux debian-based systems, just open a terminal and use one of the following commands. This was tested on Ubuntu 15.10 and lower:</p>
+        <pre>$ sudo apt-get install python-numpy python-wxgtk2.8 python-matplotlib python-scipy python-tk</pre>
+
+        <p>This was tested on Ubuntu 16.04 and higher:</p>        
+        <pre>$ sudo apt-get install python-numpy python-wxgtk3.0 python-matplotlib python-scipy python-tk</pre> 
         <p>Then, go to the directory where the .tar.gz was extracted and use:</p>
         <pre>$ python gHRV.py</pre>
 
