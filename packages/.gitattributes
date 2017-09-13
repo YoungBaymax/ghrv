@@ -2,3 +2,4 @@
 *.msi filter=lfs diff=lfs merge=lfs -text
 *.tar.gz filter=lfs diff=lfs merge=lfs -text
 *.dmg filter=lfs diff=lfs merge=lfs -text
+ghrv_1.8.tar.gz filter=lfs diff=lfs merge=lfs -text
